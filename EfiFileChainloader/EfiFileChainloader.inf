@@ -1,0 +1,32 @@
+[Defines]
+  INF_VERSION                    = 1.25
+  BASE_NAME                      = EfiFileChainloader
+  FILE_GUID                      = 5cd29e19-51dd-4e38-ba21-23601db303bc
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  Main.c
+  Console.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiLib
+  UefiRuntimeServicesTableLib
+  
+[Guids]
+  gEfiFileInfoGuid
+
+[Ppis]
+
+[Protocols]
+  gEfiSimpleTextInProtocolGuid
+
+[FeaturePcd]
+
+[Pcd]
